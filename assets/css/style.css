@@ -1,0 +1,672 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button { cursor: pointer; }
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+/* Common styling */
+.grey { color: #666; }
+.cap { text-transform: capitalize; }
+.uppercase { text-transform: uppercase; }
+.center { text-align: center; }
+.bold { font-weight: bold; }
+.transition { transition: 1s all ease; }
+.white { color: #FFF; }
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1350px;
+  width: 92.37%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+* { box-sizing: border-box; }
+
+header .wrapper {
+  padding: 17px 0 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.logo { flex:1; }
+.logo a { text-indent: -9999px; }
+.logo img { float: right; }
+.hamburger { display: none; }
+
+.nav-menu { 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; 
+  }
+
+.menu { margin-right: 5.7%; }
+.en { margin-right: 44px; }
+
+.nav-menu a {
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+}
+
+.top-data > a::after {
+  content: "\f078";
+  margin-left: 4px;
+  font: 600 8px "Font Awesome 5 Free";
+  vertical-align: middle;
+}
+
+/*dropdown menu starts here*/
+.dropdown-menu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 45px;
+  z-index: 1;
+}
+
+.dropdown-menu li { background-color: #555; }
+
+.dropdown-menu a { 
+  padding: 10px;
+  color: #FFF; 
+}
+
+.top-data:hover .dropdown-menu { display: flex; }
+/*dropdown menu ends here*/
+
+.profile a,
+.cart a { text-indent: -9999px; }
+
+.profile a::after,
+.cart a:after { 
+  content: "\f007";
+  margin-right: 28px;
+  color: #888;
+  font: 600 12px "Font Awesome 5 Free";
+  float: right;
+  text-indent: 0;
+}
+
+.cart a:after { 
+  content: "\f290";
+  padding: 13px 15px;
+  border-radius: 30px;
+  margin: 0;
+  margin-right: 5px;
+  background-color: #A4786F;
+  color: #FFF;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+/*banner styling starts here*/
+.banner .wrapper { 
+  position: relative;
+  width: 100%; 
+}
+
+.banner-text {
+  width: 80%;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.banner-text h2 {
+  margin-bottom: 4px;
+  font-size: 48px;
+}
+
+.banner-text span { 
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3.6px;
+}
+/*banner styling ends here*/
+
+/*types of bag styling starts here*/
+.bag-types { padding: 100px 0 84px; }
+
+.bag-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.bag-categories li {
+  -ms-flex-preferred-size: 28%;
+  flex-basis: 28%;
+}
+
+.bag-categories span {
+  display: inline-block;  
+  text-indent: -9999px;
+}
+
+.bag-categories span::after {
+  content: "\f00c";
+  color: #A4786F;
+  font: 900 28px "Font Awesome 5 Free";
+  float: right;
+  text-indent: 0;
+}
+
+.bag-categories h4 {
+  margin: 25px 0 9px;
+  color: #333;
+  font-size: 18px;
+}
+
+.bag-categories p {
+  color: #888;
+  font-size: 11px;
+  line-height: 20px;
+}
+.bag-categories h4:first-letter,
+.bag-categories p:first-letter { text-transform: capitalize; }
+/*types of bag styling ends here*/
+
+/*timeless styling starts here*/
+  
+.timeless { background-color: #F4F0EB; }
+
+.timeless .wrapper {
+  padding: 83px 0 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.timeless figure { 
+  text-align: right;
+  width: 46.4%; 
+  margin-top: 4px;
+}
+
+.timeless img { width: 79%; }
+
+.timeless-text { 
+  width: 50%; 
+  padding-left: 74px;
+}
+
+.timeless-text h3 {
+  width: 80%;
+  margin-bottom: 16px;
+  color: #222;
+  font-size: 22px;
+}
+
+.bag-features { margin-bottom: 27px; }
+
+.timeless-text p,
+.bag-features li {
+  width: 80%;
+  margin-bottom: 28px;
+  color: #666;
+  font-size: 11px;
+  line-height: 22px;
+}
+
+.timeless-text h3:first-letter,
+.timeless-text p:first-letter { text-transform: capitalize; }
+
+.bag-features li { margin: 0; }
+
+.bag-features li::before {
+  content: '';
+  width: 11px;
+  height: 3px;
+  border-top: 1px solid;
+  margin: 0 15px;
+  display: inline-block;
+  color: #AAA;
+}
+
+.bag-features span { display: inline-block; }
+.bag-features span:first-letter { text-transform: capitalize; }
+
+.bag-price {
+  color: #2E2B2E;
+  font-weight: 100;
+  font-size: 52px;
+}
+
+.bag-cart { 
+  border-radius: 28px;
+  margin-bottom: 18px;
+  margin-left: 15px;
+  display: inline-block; 
+  background-color: #A4786F;
+  vertical-align: middle;
+}
+
+.bag-cart a {
+  padding: 15px 42px;
+  color: #FFF;
+  font-size: 10px;
+}
+/*timeless styling ends here*/
+
+/*available colors starts here*/
+.available-colors {
+  padding: 81px 0 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.available-colors li {
+  -ms-flex-preferred-size: 23.5%;
+  flex-basis: 23.5%;
+}
+
+.available-colors-text::before {
+  content: '';
+  width: 82px;
+  height: 3px;
+  border-top: 1px solid;
+  margin: 40px 0 20px;
+  display: inline-block;
+  color: #A4786F;
+}
+
+.available-colors figure { 
+  margin: 0 auto;
+  width: 85%; 
+}
+
+.available-colors-text h4 {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 88%;
+  color: #222;
+  font-size: 13px;
+}
+
+.available-colors-text span { 
+  display: block;
+  font-size: 15px;
+  color: #888;
+}
+
+.available-colors-text .bag-cart {
+  border-radius: 28px;
+  border: 1px solid #DDD;
+  margin-top: 17px;
+  display: inline-block;
+  background-color: transparent;
+  vertical-align: middle;
+}
+
+.available-colors-text .bag-cart a {
+  padding: 11px 30px;
+  color: #222;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.circle { display: none; }
+/*available colors ends here*/
+
+/*handbags details section starts here*/
+.handbag-details { padding-bottom: 82px; }
+
+.handbag-details h3 {
+  color: #131313;
+  font-size: 32px;
+}
+
+.handbag-details h3::after {
+  content: '';
+  width: 82px;
+  height: 3px;
+  border-top: 1px solid;
+  margin: 18px 45% 27px;
+  display: block;
+  color: #A4786F;
+}
+
+.handbag-details p {
+  margin: 0 auto;
+  width: 88%;
+  font-size: 11px;
+  line-height: 22px;
+}
+.handbag-details p:first-letter { text-transform: capitalize;}
+/*handbags details section ends here*/
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+footer { 
+  padding: 52px 0 50px;
+  background-color: #996A60; 
+}
+
+.social {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.social a {
+  text-indent: -9999px;
+}
+
+.facebook a::before {
+  margin: 0 28px;
+  content: "\f39e";
+  float: right;
+  color: #FFF;
+  font: 600 9px 'Font Awesome 5 Brands';
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.twitter a::before { content: "\f099"; }
+.instagram a::before { content: "\f16d"; }
+.google-plus a::before { content: "\f0d5"; }
+.pinterest a::before { content: "\f231"; }
+
+.copyright-info { font-size: 11px; }
+
+.copyright-info a {
+  color: #FFF;
+  text-transform: capitalize; 
+}
+
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*=================================
+  media query styling starts here
+=================================*/ 
+
+/*media query for hover starts here*/
+@media only screen and (min-width: 995px) {
+  .top-data:hover > a,
+  .profile:hover a::after,
+  .cart:hover a::after { 
+    color: #000;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+  }
+
+  .dropdown-menu li:hover { 
+    background-color: #000; 
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+  }
+
+  .bag-cart:hover,
+  .available-colors-text .bag-cart:hover { 
+    background-color: #000; 
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+  }
+
+  .available-colors-text .bag-cart:hover a {
+    color: #FFF; 
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+  }
+  
+  .social li:hover a::before,
+  .copyright-info a:hover {
+    color: #000;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+  }
+}  
+/*media query for hover ends here*/
+
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+
+  .timeless figure { text-align: center; }
+
+  .timeless-text {
+    width: 50%;
+    padding-left: 0;
+  }
+
+  .timeless-text h3,
+  .timeless-text p,
+  .bag-features li { width: 100%; }
+}  
+/*media query for 1024px ends here*/
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  .wrapper { width: 94.86%; }
+  .banner-text span { font-size: 17px; }
+
+  .bag-categories {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .bag-types { padding: 82px 0 73px; }
+  .bag-categories span::after { font-size: 34px; }
+  .bag-categories h4 { font-size: 26px; }
+  .bag-categories p { font-size: 16px; }
+
+  .timeless .wrapper {
+   padding: 67px 0 103px; 
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+  }
+
+  .timeless-text { 
+    margin-left: 20px;
+    width: 90%; 
+  }
+
+  .timeless figure { 
+    width: 100%;
+    margin-bottom: 84px; 
+  }
+
+  .timeless img { width: 90%; }
+  .timeless-text h3 { font-size: 28px; }
+
+  .timeless-text p {
+    margin-bottom: 42px;
+    font-size: 16px;
+  }
+
+  .timeless-text p, 
+  .bag-features li {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .bag-cart a { padding: 22px 42px; }
+
+  .available-colors { 
+    -ms-flex-wrap:
+    wrap;flex-wrap: wrap; 
+ }
+
+  .available-colors li {
+    -ms-flex-preferred-size: 47%;
+    flex-basis: 47%;
+  }
+
+  .available-colors li:nth-child(3),
+  .available-colors li:nth-child(4) { display: none; }
+  .circle { display: block; }
+  .circle a { text-indent: -9999px; }
+
+  .circle li a::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #DDD;
+    float: right;
+    text-indent: 0;
+  }
+
+  .available-colors { padding-bottom: 20px; }
+  .circle li:nth-child(1) a::after{ background-color: #A4786F; }
+  .circle { margin-bottom: 158px; }
+
+  .handbag-details h3 { font-size: 35px; }
+
+  .handbag-details p { 
+    width: 100%;
+    font-size: 15px; 
+    line-height: 25px;
+  }
+
+  .handbag-details { padding-bottom: 67px; }
+  footer { padding: 79px 0 72px; }
+  .social { margin-bottom: 30px; }
+  .facebook a::before,
+  .copyright-info { font-size: 12px; }
+}  
+/*media query for 768px ends here*/
+
+ /*=================================
+  media query styling ends here
+=================================*/ 
